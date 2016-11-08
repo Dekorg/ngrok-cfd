@@ -1,5 +1,6 @@
 FROM golang:alpine
 
+COPY ca-certificates.crt /etc/ssl/certs/
 RUN apk add --no-cache ca-certificates
 RUN apk add --no-cache --virtual build-deps build-base git
 
